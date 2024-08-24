@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Source+Code+Pro');
+
+body {
+  margin: 0;
+  background: #020202;
+}
+
+canvas {
+  display: block;
+}
+
+h1 {
+  font-family: "Dancing Script";
+  font-size: 1.8em; /* Adjusted for smaller screens */
+  font-weight: 200;
+  color: #fff;
+
+  display: flex;
+  align-items: center; 
+  justify-content: center; /* Center the text and image horizontally */
+
+  position: absolute;
+  top: 5%; /* Adjusted top position */
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* CSS for h1 element */
+#header {
+  width: 90%; /* Adjusted width for smaller screens */
+
+  font-family: "Dancing Script";
+  font-size: 1.8em; /* Adjusted font size */
+  font-weight: 200;
+  text-align: center;
+  color: #fff;
+
+  display: flex;
+  align-items: center; 
+  justify-content: center; /* Center the text and image horizontally */
+
+  position: absolute;
+  top: 10%; /* Adjusted top position */
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+  transition: opacity 5s ease-in-out;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#header.show {
+  opacity: 1;
+}
+
+.cake {
+  width: 40px; /* Adjusted size for smaller screens */
+  margin-left: 5px; /* Adjusted margin */
+  vertical-align: middle;
+  transform: translateY(0); /* Center vertically within the h1 */
+}
+
+#messages-container {
+  width: 90%; /* Adjusted width for smaller screens */
+
+  font-family: "Source Code Pro", monospace;
+  font-size: 1em; /* Adjusted font size */
+  text-align: center;
+  color: #fff;
+
+  position: absolute;
+  top: 35%; /* Adjusted top position */
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.message {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.message.show {
+  opacity: 1;
+}
+
+#startButton {
+  font-size: 0.9rem; /* Adjusted font size */
+  background-color: #d730be;
+  color: #fff;
+
+  border: none;
+  border-radius: 5px;
+
+  position: absolute;
+  bottom: 10%; /* Adjusted bottom position */
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  padding: 8px 16px; /* Adjusted padding */
+
+  cursor: pointer;
+}
+
+#startButton:hover {
+  background-color: #c80fad;
+}
+
+/* Media query for very small screens */
+@media (max-width: 320px) {
+  h1 {
+    font-size: 1.5em; /* Further adjustment for very small screens */
+  }
+
+  .cake {
+    width: 30px; /* Further adjustment for very small screens */
+    margin-left: 3px; /* Further adjustment for very small screens */
+  }
+
+  #messages-container {
+    font-size: 0.9em; /* Further adjustment for very small screens */
+  }
+
+  #startButton {
+    font-size: 0.8rem; /* Further adjustment for very small screens */
+    padding: 6px 12px; /* Further adjustment for very small screens */
+  }
+}
